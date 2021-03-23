@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_container.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -9,14 +10,49 @@ class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text('BMI CALCULATOR'),
+        appBar: AppBar(
+          title: Center(
+            child: Text('BMI CALCULATOR'),
+          ),
         ),
-      ),
-      body: Center(
-        child: Text('Body Text'),
-      ),
-    );
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: CustomContainer(
+                      color: Color(0xFF1D1E33),
+                    )),
+                    Expanded(
+                        child: CustomContainer(
+                      color: Color(0xFF1D1E33),
+                    ))
+                  ],
+                ),
+              ),
+              Expanded(
+                child: CustomContainer(
+                  color: Color(0xFF1D1E33),
+                ),
+              ),
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        child: CustomContainer(
+                      color: Color(0xFF1D1E33),
+                    )),
+                    Expanded(
+                        child: CustomContainer(
+                      color: Color(0xFF1D1E33),
+                    ))
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ));
   }
 }
