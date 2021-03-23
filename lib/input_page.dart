@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'custom_container.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import './custom_container.dart';
+import './container_content.dart';
 
 final Color cardColor = Color(0xFF1D1E33);
+final Color textColor = Color(0xFF8D8E98);
 final Color buttonColor = Color(0xFFEB1555);
 final double buttonHeight = 80.0;
 
@@ -27,11 +30,20 @@ class _InputPageState extends State<InputPage> {
                   children: <Widget>[
                     Expanded(
                         child: CustomContainer(
-                      color: cardColor,
-                    )),
+                            color: cardColor,
+                            child: ContainerContent(
+                              color: textColor,
+                              icon: FontAwesomeIcons.mars,
+                              text: 'Male',
+                            ))),
                     Expanded(
                         child: CustomContainer(
                       color: cardColor,
+                      child: ContainerContent(
+                        color: textColor,
+                        icon: FontAwesomeIcons.venus,
+                        text: 'Female',
+                      ),
                     ))
                   ],
                 ),
