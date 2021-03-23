@@ -7,6 +7,7 @@ final Color cardColor = Color(0xFF1D1E33);
 final Color textColor = Color(0xFF8D8E98);
 final Color buttonColor = Color(0xFFEB1555);
 final double buttonHeight = 80.0;
+final double buttonMargin = 10.0;
 
 class InputPage extends StatefulWidget {
   @override
@@ -71,7 +72,7 @@ class _InputPageState extends State<InputPage> {
                 color: buttonColor,
                 width: double.infinity,
                 height: buttonHeight,
-                margin: EdgeInsets.only(top: 10.0),
+                margin: EdgeInsets.only(top: buttonMargin),
               )
             ],
           ),
