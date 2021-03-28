@@ -10,18 +10,28 @@ final Color buttonColor = Color(0xFFEB1555);
 final double buttonHeight = 80.0;
 final double buttonMargin = 10.0;
 
+enum GenderType { male, female }
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
 }
 
 class _InputPageState extends State<InputPage> {
-  maleTapped() {
-    print('male button was pressed');
-  }
+  Color maleColor, femaleColor = cardInactiveColor;
 
-  femaleTapped() {
-    print('female button was pressed');
+  setGender(GenderType gender) {
+    if (gender == GenderType.male) {
+      setState(() {
+        maleColor = cardActiveColor;
+        femaleColor = cardInactiveColor;
+      });
+    } else {
+      setState(() {
+        femaleColor = cardActiveColor;
+        maleColor = cardInactiveColor;
+      });
+    }
   }
 
   @override
@@ -40,8 +50,10 @@ class _InputPageState extends State<InputPage> {
                   children: <Widget>[
                     Expanded(
                         child: CustomContainer(
-                            onTap: maleTapped,
-                            color: cardInactiveColor,
+                            onTap: () {
+                              setGender(GenderType.male);
+                            },
+                            color: maleColor,
                             child: ContainerContent(
                               color: textColor,
                               icon: FontAwesomeIcons.mars,
@@ -49,8 +61,10 @@ class _InputPageState extends State<InputPage> {
                             ))),
                     Expanded(
                         child: CustomContainer(
-                      onTap: femaleTapped,
-                      color: cardInactiveColor,
+                      onTap: () {
+                        setGender(GenderType.female);
+                      },
+                      color: femaleColor,
                       child: ContainerContent(
                         color: textColor,
                         icon: FontAwesomeIcons.venus,
