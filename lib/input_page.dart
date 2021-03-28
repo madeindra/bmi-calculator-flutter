@@ -3,7 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './custom_container.dart';
 import './container_content.dart';
 
-final Color cardColor = Color(0xFF1D1E33);
+final Color cardActiveColor = Color(0xFF1D1E33);
+final Color cardInactiveColor = Color(0xFF111328);
 final Color textColor = Color(0xFF8D8E98);
 final Color buttonColor = Color(0xFFEB1555);
 final double buttonHeight = 80.0;
@@ -15,6 +16,14 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  maleTapped() {
+    print('male button was pressed');
+  }
+
+  femaleTapped() {
+    print('female button was pressed');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +40,8 @@ class _InputPageState extends State<InputPage> {
                   children: <Widget>[
                     Expanded(
                         child: CustomContainer(
-                            color: cardColor,
+                            onTap: maleTapped,
+                            color: cardInactiveColor,
                             child: ContainerContent(
                               color: textColor,
                               icon: FontAwesomeIcons.mars,
@@ -39,7 +49,8 @@ class _InputPageState extends State<InputPage> {
                             ))),
                     Expanded(
                         child: CustomContainer(
-                      color: cardColor,
+                      onTap: femaleTapped,
+                      color: cardInactiveColor,
                       child: ContainerContent(
                         color: textColor,
                         icon: FontAwesomeIcons.venus,
@@ -51,7 +62,7 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: CustomContainer(
-                  color: cardColor,
+                  color: cardActiveColor,
                 ),
               ),
               Expanded(
@@ -59,11 +70,11 @@ class _InputPageState extends State<InputPage> {
                   children: <Widget>[
                     Expanded(
                         child: CustomContainer(
-                      color: cardColor,
+                      color: cardActiveColor,
                     )),
                     Expanded(
                         child: CustomContainer(
-                      color: cardColor,
+                      color: cardActiveColor,
                     ))
                   ],
                 ),
