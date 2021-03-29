@@ -20,6 +20,12 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
 
+  void setGender(Gender gender) {
+    setState(() {
+      selectedGender = gender;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +43,7 @@ class _InputPageState extends State<InputPage> {
                     Expanded(
                         child: CustomContainer(
                             onTap: () {
-                              setState(() {
-                                selectedGender = Gender.male;
-                              });
+                              setGender(Gender.male);
                             },
                             color: selectedGender == Gender.male
                                 ? cardActiveColor
@@ -52,9 +56,7 @@ class _InputPageState extends State<InputPage> {
                     Expanded(
                         child: CustomContainer(
                       onTap: () {
-                        setState(() {
-                          selectedGender = Gender.female;
-                        });
+                        setGender(Gender.female);
                       },
                       color: selectedGender == Gender.female
                           ? cardActiveColor
