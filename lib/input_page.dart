@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './constant.dart';
 import './custom_container.dart';
 import './container_content.dart';
+import './slider_content.dart';
 
 enum Gender { male, female }
 
@@ -13,10 +14,17 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
+  double userHeight = 180;
 
   void setGender(Gender gender) {
     setState(() {
       selectedGender = gender;
+    });
+  }
+
+  void setHeight(double height) {
+    setState(() {
+      userHeight = height;
     });
   }
 
@@ -30,6 +38,7 @@ class _InputPageState extends State<InputPage> {
         ),
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Expanded(
                 child: Row(
@@ -67,6 +76,12 @@ class _InputPageState extends State<InputPage> {
               Expanded(
                 child: CustomContainer(
                   color: kCardActiveColor,
+                  child: SliderContent(
+                    color: kTextColor,
+                    text: 'Height',
+                    height: userHeight,
+                    onChange: setHeight,
+                  ),
                 ),
               ),
               Expanded(

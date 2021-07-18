@@ -16,3 +16,7 @@ const double kBorderRadius = 10.0;
 const double kIconSize = 80.0;
 const double kSpacingHeight = 15.0;
 const double kFontSize = 18.0;
+
+// Others
+const TextStyle kNumberText =
+    TextStyle(fontWeight: FontWeight.w900, fontSize: 50.0);
