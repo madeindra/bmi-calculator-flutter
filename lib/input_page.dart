@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import './constant.dart';
 import './custom_container.dart';
 import './container_content.dart';
-
-final Color cardActiveColor = Color(0xFF1D1E33);
-final Color cardInactiveColor = Color(0xFF111328);
-final Color textColor = Color(0xFF8D8E98);
-final Color buttonColor = Color(0xFFEB1555);
-final double buttonHeight = 80.0;
-final double buttonMargin = 10.0;
 
 enum Gender { male, female }
 
@@ -46,10 +40,10 @@ class _InputPageState extends State<InputPage> {
                               setGender(Gender.male);
                             },
                             color: selectedGender == Gender.male
-                                ? cardActiveColor
-                                : cardInactiveColor,
+                                ? kCardActiveColor
+                                : kCardInactiveColor,
                             child: ContainerContent(
-                              color: textColor,
+                              color: kTextColor,
                               icon: FontAwesomeIcons.mars,
                               text: 'Male',
                             ))),
@@ -59,10 +53,10 @@ class _InputPageState extends State<InputPage> {
                         setGender(Gender.female);
                       },
                       color: selectedGender == Gender.female
-                          ? cardActiveColor
-                          : cardInactiveColor,
+                          ? kCardActiveColor
+                          : kCardInactiveColor,
                       child: ContainerContent(
-                        color: textColor,
+                        color: kTextColor,
                         icon: FontAwesomeIcons.venus,
                         text: 'Female',
                       ),
@@ -72,7 +66,7 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: CustomContainer(
-                  color: cardActiveColor,
+                  color: kCardActiveColor,
                 ),
               ),
               Expanded(
@@ -80,20 +74,20 @@ class _InputPageState extends State<InputPage> {
                   children: <Widget>[
                     Expanded(
                         child: CustomContainer(
-                      color: cardActiveColor,
+                      color: kCardActiveColor,
                     )),
                     Expanded(
                         child: CustomContainer(
-                      color: cardActiveColor,
+                      color: kCardActiveColor,
                     ))
                   ],
                 ),
               ),
               Container(
-                color: buttonColor,
+                color: kButtonColor,
                 width: double.infinity,
-                height: buttonHeight,
-                margin: EdgeInsets.only(top: buttonMargin),
+                height: kButtonHeight,
+                margin: EdgeInsets.only(top: kButtonMargin),
               )
             ],
           ),

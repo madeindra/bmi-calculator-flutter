@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-final double marginSize = 15.0;
-final double borderRadius = 10.0;
+import './constant.dart';
 
 class CustomContainer extends StatelessWidget {
   const CustomContainer({this.child, this.color, this.onTap});
@@ -15,10 +13,10 @@ class CustomContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.all(marginSize),
+        margin: EdgeInsets.all(kMarginSize),
         decoration: BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(borderRadius),
+          borderRadius: BorderRadius.circular(kBorderRadius),
         ),
         child: child,
       ),
