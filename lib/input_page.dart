@@ -43,6 +43,18 @@ class _InputPageState extends State<InputPage> {
     });
   }
 
+  void addAge() {
+    setState(() {
+      userAge++;
+    });
+  }
+
+  void subAge() {
+    setState(() {
+      userAge--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,9 +126,16 @@ class _InputPageState extends State<InputPage> {
                       ),
                     ),
                     Expanded(
-                        child: CustomContainer(
-                      color: kCardActiveColor,
-                    ))
+                      child: CustomContainer(
+                        color: kCardActiveColor,
+                        child: TwoButtonContent(
+                          title: 'Age',
+                          value: userAge,
+                          onAdd: addAge,
+                          onSubstract: subAge,
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
