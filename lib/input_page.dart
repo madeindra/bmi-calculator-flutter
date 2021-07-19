@@ -33,13 +33,13 @@ class _InputPageState extends State<InputPage> {
 
   void addWeight() {
     setState(() {
-      userWeight++;
+      userWeight = userWeight + 0.5;
     });
   }
 
   void subWeight() {
     setState(() {
-      userWeight--;
+      userWeight = userWeight - 0.5;
     });
   }
 
