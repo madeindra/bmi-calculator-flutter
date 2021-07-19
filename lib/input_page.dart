@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './constant.dart';
 import './custom_container.dart';
 import './container_content.dart';
+import './two_button_content.dart';
 import './slider_content.dart';
 
 enum Gender { male, female }
@@ -15,6 +16,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   double userHeight = 180;
+  double userWeight = 60;
+  int userAge = 18;
 
   void setGender(Gender gender) {
     setState(() {
@@ -25,6 +28,18 @@ class _InputPageState extends State<InputPage> {
   void setHeight(double height) {
     setState(() {
       userHeight = height;
+    });
+  }
+
+  void addWeight() {
+    setState(() {
+      userWeight++;
+    });
+  }
+
+  void subWeight() {
+    setState(() {
+      userWeight--;
     });
   }
 
@@ -88,9 +103,16 @@ class _InputPageState extends State<InputPage> {
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                        child: CustomContainer(
-                      color: kCardActiveColor,
-                    )),
+                      child: CustomContainer(
+                        color: kCardActiveColor,
+                        child: TwoButtonContent(
+                          title: 'Height',
+                          value: userWeight,
+                          onAdd: addWeight,
+                          onSubstract: subWeight,
+                        ),
+                      ),
+                    ),
                     Expanded(
                         child: CustomContainer(
                       color: kCardActiveColor,
@@ -102,7 +124,9 @@ class _InputPageState extends State<InputPage> {
                 color: kButtonColor,
                 width: double.infinity,
                 height: kButtonHeight,
-                margin: EdgeInsets.only(top: kButtonMargin),
+                margin: EdgeInsets.only(
+                  top: kButtonMargin,
+                ),
               )
             ],
           ),

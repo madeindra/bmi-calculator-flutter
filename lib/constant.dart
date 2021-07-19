@@ -21,6 +21,9 @@ const double kFontSize = 18.0;
 const Color kThumbColor = Color(0xFFEB1555);
 const Color kThumbOverlayColor = Color(0x29EB1555);
 
+// Two Button Content
+const Color kDualButtonColor = Color(0xFF4C4F5E);
+
 // Others
 const TextStyle kNumberText =
     TextStyle(fontWeight: FontWeight.w900, fontSize: 50.0);
