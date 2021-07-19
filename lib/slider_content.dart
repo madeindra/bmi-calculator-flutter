@@ -12,7 +12,7 @@ class SliderContent extends StatelessWidget {
   final Color color;
   final String text;
   final double height;
-  final onChange;
+  final Function onChange;
 
   @override
   Widget build(BuildContext context) {

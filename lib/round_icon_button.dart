@@ -8,7 +8,7 @@ class RoundIconButton extends StatelessWidget {
   });
 
   final Icon icon;
-  final onPress;
+  final Function onPress;
 
   @override
   Widget build(BuildContext context) {

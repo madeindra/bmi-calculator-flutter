@@ -12,8 +12,8 @@ class TwoButtonContent extends StatelessWidget {
 
   final String title;
   final double value;
-  final onSubstract;
-  final onAdd;
+  final Function onSubstract;
+  final Function onAdd;
 
   @override
   Widget build(BuildContext context) {
