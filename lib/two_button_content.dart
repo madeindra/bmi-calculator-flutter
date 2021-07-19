@@ -11,7 +11,7 @@ class TwoButtonContent extends StatelessWidget {
   });
 
   final String title;
-  final double value;
+  final dynamic value;
   final Function onSubstract;
   final Function onAdd;
 
