@@ -46,12 +46,25 @@ class SliderContent extends StatelessWidget {
             ),
           ],
         ),
-        Slider(
-          value: height,
-          min: 50.0,
-          max: 300.0,
-          divisions: 500,
-          onChanged: onChange,
+        SliderTheme(
+          data: SliderTheme.of(context).copyWith(
+              thumbShape: RoundSliderThumbShape(
+                enabledThumbRadius: 12,
+              ),
+              overlayShape: RoundSliderOverlayShape(
+                overlayRadius: 22,
+              ),
+              thumbColor: kThumbColor,
+              overlayColor: kThumbOverlayColor,
+              activeTrackColor: Colors.white,
+              inactiveTrackColor: kTextColor),
+          child: Slider(
+            value: height,
+            min: 50.0,
+            max: 300.0,
+            divisions: 500,
+            onChanged: onChange,
+          ),
         )
       ],
     );

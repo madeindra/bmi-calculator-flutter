@@ -17,6 +17,10 @@ const double kIconSize = 80.0;
 const double kSpacingHeight = 15.0;
 const double kFontSize = 18.0;
 
+// Slider
+const Color kThumbColor = Color(0xFFEB1555);
+const Color kThumbOverlayColor = Color(0x29EB1555);
+
 // Others
 const TextStyle kNumberText =
     TextStyle(fontWeight: FontWeight.w900, fontSize: 50.0);
