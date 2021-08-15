@@ -29,11 +29,14 @@ class ResultPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Expanded(
+              child: Container(
             child: Text(
               'Result',
               style: kTitleText,
             ),
-          ),
+            padding: EdgeInsets.all(15.0),
+            alignment: Alignment.bottomLeft,
+          )),
           Expanded(
             child: CustomContainer(
               color: kCardActiveColor,
