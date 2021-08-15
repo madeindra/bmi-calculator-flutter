@@ -147,8 +147,14 @@ class _InputPageState extends State<InputPage> {
                   margin: EdgeInsets.only(
                     top: kButtonMargin,
                   ),
+                  padding: EdgeInsets.only(
+                    bottom: 7,
+                  ),
                   child: Center(
-                    child: Text('CALCULATE'),
+                    child: Text(
+                      'CALCULATE',
+                      style: kLargeButtonText,
+                    ),
                   ),
                 ),
                 onTap: () {

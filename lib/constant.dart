@@ -8,6 +8,11 @@ const Color kButtonColor = Color(0xFFEB1555);
 const double kButtonHeight = 80.0;
 const double kButtonMargin = 10.0;
 
+const TextStyle kLargeButtonText = TextStyle(
+  fontSize: 25.0,
+  fontWeight: FontWeight.bold,
+);
+
 // Custom Container
 const double kMarginSize = 15.0;
 const double kBorderRadius = 10.0;
