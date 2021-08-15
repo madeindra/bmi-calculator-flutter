@@ -36,6 +36,17 @@ class ResultPage extends StatelessWidget {
           Expanded(
             child: CustomContainer(
               color: kCardActiveColor,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text('Normal'),
+                  Text('26.1'),
+                  Text('Normal BMI Range:'),
+                  Text('18.5 - 25 kg/m2'),
+                  Text('You have higher than normal BMI. Try to exercise more.')
+                ],
+              ),
             ),
             flex: 5,
           ),
