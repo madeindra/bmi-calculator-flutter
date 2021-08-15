@@ -1,25 +1,14 @@
 import 'package:flutter/material.dart';
 import '../constant.dart';
+import '../calculator_brain.dart';
 import '../components/custom_container.dart';
 import '../components/bottom_button.dart';
 
-enum Gender { male, female }
-
 class ResultPage extends StatelessWidget {
-  const ResultPage({
-    this.gender,
-    this.height,
-    this.weight,
-    this.age,
-  });
-
-  final Gender gender;
-  final double height;
-  final double weight;
-  final int age;
-
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context).settings.arguments as CalculatorBrain;
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -45,11 +34,11 @@ class ResultPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'NORMAL',
+                    args.getResult(),
                     style: kResultTypeText,
                   ),
                   Text(
-                    '26.1',
+                    args.getBMI(),
                     style: kResultNumberText,
                   ),
                   Padding(
@@ -58,7 +47,7 @@ class ResultPage extends StatelessWidget {
                       horizontal: 25.0,
                     ),
                     child: Text(
-                      'You have higher than normal BMI. Try to exercise more.',
+                      args.getDesc(),
                       style: kResultInfoText,
                       textAlign: TextAlign.center,
                     ),

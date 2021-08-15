@@ -53,3 +53,5 @@ const Color kDualButtonColor = Color(0xFF4C4F5E);
 // Others
 const TextStyle kNumberText =
     TextStyle(fontWeight: FontWeight.w900, fontSize: 50.0);
+
+enum Gender { male, female }
