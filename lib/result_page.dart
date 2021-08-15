@@ -40,11 +40,25 @@ class ResultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text('Normal'),
-                  Text('26.1'),
-                  Text('Normal BMI Range:'),
-                  Text('18.5 - 25 kg/m2'),
-                  Text('You have higher than normal BMI. Try to exercise more.')
+                  Text(
+                    'NORMAL',
+                    style: kResultTypeText,
+                  ),
+                  Text(
+                    '26.1',
+                    style: kResultNumberText,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 0.0,
+                      horizontal: 25.0,
+                    ),
+                    child: Text(
+                      'You have higher than normal BMI. Try to exercise more.',
+                      style: kResultInfoText,
+                      textAlign: TextAlign.center,
+                    ),
+                  )
                 ],
               ),
             ),

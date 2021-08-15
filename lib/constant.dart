@@ -19,6 +19,21 @@ const TextStyle kTitleText = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
+const TextStyle kResultTypeText = TextStyle(
+  color: Color(0xFF24D876),
+  fontSize: 22.0,
+  fontWeight: FontWeight.bold,
+);
+
+const TextStyle kResultNumberText = TextStyle(
+  fontSize: 100.0,
+  fontWeight: FontWeight.bold,
+);
+
+const TextStyle kResultInfoText = TextStyle(
+  fontSize: 20,
+);
+
 // Custom Container
 const double kMarginSize = 15.0;
 const double kBorderRadius = 10.0;
