@@ -34,7 +34,7 @@ class ResultPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    args.getResult(),
+                    args.getResult().toUpperCase(),
                     style: kResultTypeText,
                   ),
                   Text(
