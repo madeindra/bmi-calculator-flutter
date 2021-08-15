@@ -13,6 +13,12 @@ const TextStyle kLargeButtonText = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
+// Result Page
+const TextStyle kTitleText = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+);
+
 // Custom Container
 const double kMarginSize = 15.0;
 const double kBorderRadius = 10.0;

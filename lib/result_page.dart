@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './constant.dart';
+import './custom_container.dart';
 
 enum Gender { male, female }
 
@@ -19,12 +21,47 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text('BMI CALCULATOR'),
-        ),
+        centerTitle: true,
+        title: Text('BMI CALCULATOR'),
       ),
-      body: Center(
-        child: Text('Hello There'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Expanded(
+            child: Text(
+              'Result',
+              style: kTitleText,
+            ),
+          ),
+          Expanded(
+            child: CustomContainer(
+              color: kCardActiveColor,
+            ),
+            flex: 5,
+          ),
+          GestureDetector(
+            child: Container(
+              color: kButtonColor,
+              width: double.infinity,
+              height: kButtonHeight,
+              margin: EdgeInsets.only(
+                top: kButtonMargin,
+              ),
+              padding: EdgeInsets.only(
+                bottom: 7,
+              ),
+              child: Center(
+                child: Text(
+                  'RE-CALCULATE',
+                  style: kLargeButtonText,
+                ),
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
       ),
     );
   }
