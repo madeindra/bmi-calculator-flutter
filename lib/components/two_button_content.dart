@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './round_icon_button.dart';
-import './constant.dart';
+import '../constant.dart';
 
 class TwoButtonContent extends StatelessWidget {
   const TwoButtonContent({

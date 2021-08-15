@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './constant.dart';
+import '../constant.dart';
 
 class CustomContainer extends StatelessWidget {
   const CustomContainer({this.child, this.color, this.onTap});

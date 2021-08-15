@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './constant.dart';
-import './custom_container.dart';
-import './bottom_button.dart';
+import '../constant.dart';
+import '../components/custom_container.dart';
+import '../components/bottom_button.dart';
 
 enum Gender { male, female }
 
