@@ -5,6 +5,7 @@ import './custom_container.dart';
 import './container_content.dart';
 import './two_button_content.dart';
 import './slider_content.dart';
+import './bottom_button.dart';
 
 enum Gender { male, female }
 
@@ -138,28 +139,17 @@ class _InputPageState extends State<InputPage> {
                   ],
                 ),
               ),
-              GestureDetector(
-                child: Container(
-                  color: kButtonColor,
-                  width: double.infinity,
-                  height: kButtonHeight,
-                  margin: EdgeInsets.only(
-                    top: kButtonMargin,
-                  ),
-                  padding: EdgeInsets.only(
-                    bottom: 7,
-                  ),
-                  child: Center(
-                    child: Text(
-                      'CALCULATE',
-                      style: kLargeButtonText,
-                    ),
+              BottomButton(
+                child: Center(
+                  child: Text(
+                    'CALCULATE',
+                    style: kLargeButtonText,
                   ),
                 ),
                 onTap: () {
                   Navigator.pushNamed(context, '/result');
                 },
-              )
+              ),
             ],
           ),
         ));

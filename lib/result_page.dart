@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './constant.dart';
 import './custom_container.dart';
+import './bottom_button.dart';
 
 enum Gender { male, female }
 
@@ -64,22 +65,11 @@ class ResultPage extends StatelessWidget {
             ),
             flex: 5,
           ),
-          GestureDetector(
-            child: Container(
-              color: kButtonColor,
-              width: double.infinity,
-              height: kButtonHeight,
-              margin: EdgeInsets.only(
-                top: kButtonMargin,
-              ),
-              padding: EdgeInsets.only(
-                bottom: 7,
-              ),
-              child: Center(
-                child: Text(
-                  'RE-CALCULATE',
-                  style: kLargeButtonText,
-                ),
+          BottomButton(
+            child: Center(
+              child: Text(
+                'RE-CALCULATE',
+                style: kLargeButtonText,
               ),
             ),
             onTap: () {
